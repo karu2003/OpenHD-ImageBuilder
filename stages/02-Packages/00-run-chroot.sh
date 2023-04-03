@@ -21,7 +21,7 @@ function fix_radxa_apt {
     wget -O - apt.radxa.com/bullseye-stable/public.key | apt-key add -
     apt update
 }
-function install_radxa-ubuntu_packages {
+function install_radxa-debian_packages {
     PLATFORM_PACKAGES_HOLD=""
     PLATFORM_PACKAGES="qopenhd rtl8812au-autocompiler procps cmake dkms"
 }
@@ -59,7 +59,7 @@ function clone_github_repos {
  
  if [[ "${OS}" == "raspbian" ]]; then
     install_raspbian_packages
- elif [[ "${OS}" == "radxa-ubuntu" ]] ; then
+ elif [[ "${OS}" == "radxa-debian" ]] ; then
     install_radxa-ubuntu_packages
  elif [[ "${OS}" == "ubuntu-x86" ]] ; then
     install_ubuntu_x86_packages

@@ -1,0 +1,10 @@
+BASE_IMAGE_URL="https://github.com/radxa-build/radxa-cm3-rpi-cm4-io/releases/download/20230401-0057/"
+BASE_IMAGE="radxa-cm3-rpi-cm4-io_ubuntu_jammy_xfce_b10.img.xz"
+BASE_IMAGE_SHA256="3ee46b8082c31bb99c13ee0d10f34fbf6948d3cf11386a9ce9eea17ea8d7f44b4502db3412facb4df2386a13d269f040f112b031d7f6171108531cb2e21a189f"
+OS="radxa-ubuntu"
+DISTRO="jammy"
+HAVE_BOOT_PART=false
+HAVE_CONF_PART=true
+BOOT_PART=2
+ROOT_PART=1
+BIT="64"

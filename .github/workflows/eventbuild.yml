@@ -2,7 +2,7 @@ name: Image build on event
 
 on:
   push:
-    branches: [ "2.3-evo-rock5a-tests" ]
+    branches: [ "poc-builds" ]
     paths-ignore:
       - "last.releases"
 

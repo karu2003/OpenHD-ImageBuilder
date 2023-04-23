@@ -18,8 +18,8 @@ function install_raspbian_packages {
 }
 # Ubuntu-Rockship-specific code
 function install_radxa-ubuntu_packages {
-    #PLATFORM_PACKAGES_HOLD="linux-image-5.10.110-1-rockchip linux-headers-5.10.110-1-rockchip initramfs-tools"
-    PLATFORM_PACKAGES="qopenhd rtl8812au-autocompiler fan-control-rock5b procps"
+    PLATFORM_PACKAGES_HOLD="u-boot-latest"
+    PLATFORM_PACKAGES="qopenhd rtl8812au-autocompiler procps"
 }
 # Ubuntu-x86-specific code
 function install_ubuntu_x86_packages {

@@ -1,6 +1,6 @@
 BASE_IMAGE_URL="https://openhd-images.fra1.cdn.digitaloceanspaces.com/BaseImages"
-BASE_IMAGE="OpenHD-image-x86-lunar-testing-x86-2023-04-23_0232.7z"
-BASE_IMAGE_SHA256="a398f09c389f92a5d14f69986e5d72aa0721a0593d86b4f0870edaae2ed3a2a0"
+BASE_IMAGE="OpenHD-image-x86-lunar-testing-x86-2023-04-23_0523.7z"
+BASE_IMAGE_SHA256="e1b162322e57e6e6eadb2a5bc8b7a7e634fd5814a2c5947fe2fa54be62225ff9"
 OS="ubuntu-x86"
 DISTRO="lunar"
 HAVE_BOOT_PART=false

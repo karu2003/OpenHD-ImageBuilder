@@ -15,7 +15,7 @@ jobs:
       fail-fast: false # Don't fail all if any of the jobs is failing
       matrix:
         TESTING: [release]
-        TARGET: [rk3566,x86-lunar] # <-- Add targets here!
+        TARGET: [rock5a,rk3566,x86-lunar] # <-- Add targets here!
 
 
     steps:

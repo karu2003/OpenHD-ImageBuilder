@@ -1,6 +1,6 @@
 BASE_IMAGE_URL="https://github.com/radxa-build/rock-5a/releases/download/b15/"
 BASE_IMAGE="rock-5a_ubuntu_jammy_xfce_b15.img.xz"
-BASE_IMAGE_SHA256="d5572c005d0b5629f273c58d17b496bb868c63befdb755439e60a067f9fd3f9d"
+BASE_IMAGE_SHA256="84d214a53d737867c393d8da01175026261742a210ed0ac0b9197003fae1b047"
 OS="radxa-ubuntu"
 DISTRO="jammy"
 HAVE_BOOT_PART=false

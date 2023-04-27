@@ -4,9 +4,9 @@ pushd ${STAGE_WORK_DIR}
 
     #Makes the images flashable with raspberry pi imager
     log "We now define the size to be ~15GB (the maximum size we have in our github builder, this doesn't affect the output image because we're resizeing it in the end before uploading the image)" 
-    WANTEDSIZE="${BUILDSIZE_UNRESIZED}"
+    echo ${BUILDSIZE_UNRESIZED}
     FILESIZE=$(stat -c%s "IMAGE.img")
-    DIFFERENCE=$(expr $WANTEDSIZE - $FILESIZE)
+    DIFFERENCE=$(expr $${BUILDSIZE_UNRESIZED} - $FILESIZE)
     DIFFERENCE=$(expr $DIFFERENCE - 1)
     echo "partitions in image:"
     sudo gdisk -l IMAGE.img

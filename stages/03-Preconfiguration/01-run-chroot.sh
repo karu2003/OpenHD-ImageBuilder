@@ -37,7 +37,7 @@ if [[ "${OS}" != "ubuntu" ]] || [[ "${OS}" != "ubuntu-x86" ]]; then
     sudo systemctl disable systemd-journal-flush.service
 fi
 
-if [[ "${OS}" == "radxa-ubuntu" ]] ; then
+if [[ "${OS}" == "radxa-ubuntu" ]] || [[ "${OS}" == "radxa-debian" ]] ; then
        systemctl enable fan-control
        systemctl disable openhd
 fi

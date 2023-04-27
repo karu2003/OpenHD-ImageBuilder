@@ -147,6 +147,7 @@ export BASE_IMAGE_Mirror
 export HAS_CUSTOM_KERNEL
 export BIT
 export ROOT_PART
+export WANTEDSIZE
 export BOOT_PART
 export HAVE_BOOT_PART
 export HAVE_CONF_PART

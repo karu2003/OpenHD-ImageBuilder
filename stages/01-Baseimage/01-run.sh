@@ -4,7 +4,7 @@ pushd ${STAGE_WORK_DIR}
 
     #Makes the images flashable with raspberry pi imager
     log "We now define the size to be ~15GB (the maximum size we have in our github builder, this doesn't affect the output image because we're resizeing it in the end before uploading the image)" 
-    WANTEDSIZE="16500000256"
+    WANTEDSIZE="${BUILDSIZE_UNRESIZED}"
     FILESIZE=$(stat -c%s "IMAGE.img")
     DIFFERENCE=$(expr $WANTEDSIZE - $FILESIZE)
     DIFFERENCE=$(expr $DIFFERENCE - 1)
@@ -29,7 +29,7 @@ if [[ "${DIFFERENCE}" < 2147483648 ]]; then
     echo "resize with parted"
     #fixing bad partition table
     echo -e "x\ne\nd\nn\n\n\n\n\nw\ny\n" | sudo gdisk IMAGE.img
-    sudo parted -s IMAGE.img resizepart 2 100%
+    sudo parted -s IMAGE.img resizepart ${ROOT_PART} 100%
     sudo gdisk -l IMAGE.img
     else
 
@@ -41,7 +41,7 @@ if [[ "${DIFFERENCE}" < 2147483648 ]]; then
 
     PARTED_OUT=$(parted -s IMAGE.img unit s print)
     ROOT_OFFSET=$(echo "$PARTED_OUT" | grep -e "^ ${ROOT_PART}"| xargs echo -n \
-        | cut -d" " -f 2 | tr -d s)
+        | cut -d" " -f ${ROOT_PART} | tr -d s)
     
     echo "ROOT PART: ${ROOT_PART}"
     echo "ROOT OFFSET: $ROOT_OFFSET"

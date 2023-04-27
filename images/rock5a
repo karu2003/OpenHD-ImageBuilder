@@ -1,6 +1,6 @@
 BASE_IMAGE_URL="https://github.com/radxa-build/rock-5a/releases/download/b15/"
 BASE_IMAGE="rock-5a_debian_bullseye_xfce_b15.img.xz"
-BASE_IMAGE_SHA256="84d214a53d737867c393d8da01175026261742a210ed0ac0b9197003fae1b047"
+BASE_IMAGE_SHA256="477e48b40425b828046494a6cd2b2aeb453af945d8fee06adbc45c9c87454926"
 OS="radxa-debian"
 DISTRO="bullseye"
 HAVE_BOOT_PART=false

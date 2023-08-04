@@ -64,17 +64,6 @@ jobs:
         VERSION=$(echo "${{ env.VERSION }}" | sed 's/\.img\.xz$//')
         echo "VERSION=${VERSION}" >> $GITHUB_ENV
 
-    - name: remove double zipping
-      run: |
-        cd update
-        ls -a
-        mkdir temp
-        mv *.zip temp/
-        cd temp
-        unzip *
-        ls -a
-        rm -Rf update.zip
-
 
     - name: Pack image for Pi-bullseye
       uses: 'actions/upload-artifact@v2'

@@ -73,6 +73,7 @@ jobs:
         cd temp
         unzip *
         ls -a
+        rm -Rf update.zip
 
 
     - name: Pack image for Pi-bullseye
@@ -80,5 +81,5 @@ jobs:
       with:
         name: ${{ env.VERSION}}-update-to${{ env.NEWVERSION }}
         path: |
-          update/*.zip
+          *.deb
           if-no-files-found: error

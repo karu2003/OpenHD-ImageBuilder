@@ -66,6 +66,7 @@ jobs:
 
     - name: remove double zipping
       run: |
+        ls -a
         mkdir temp
         mv *.zip temp/
         cd temp

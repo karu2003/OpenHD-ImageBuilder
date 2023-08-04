@@ -29,5 +29,5 @@ for package in $UPGRADABLE_PACKAGES; do
   mv *.deb "$UPDATE_FOLDER"
 done
 
-# Create the zip file
-zip -r "$ZIP_FILE" "$UPDATE_FOLDER"
+# # Create the zip file
+# zip -r "$ZIP_FILE" "$UPDATE_FOLDER"

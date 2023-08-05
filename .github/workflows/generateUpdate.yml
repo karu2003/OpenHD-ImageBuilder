@@ -63,9 +63,8 @@ jobs:
       run: |
         VERSION=$(echo "${{ env.VERSION }}" | sed 's/\.img\.xz$//')
         echo "VERSION=${VERSION}" >> $GITHUB_ENV
-        ls -a
         cd update
-        ls -a
+        cp *.deb ../
 
 
     - name: Pack image for Pi-bullseye
@@ -73,5 +72,5 @@ jobs:
       with:
         name: ${{ env.VERSION}}-update-to${{ env.NEWVERSION }}
         path: |
-          update/*.deb
+          *.deb
           if-no-files-found: error

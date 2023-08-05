@@ -63,7 +63,9 @@ jobs:
       run: |
         VERSION=$(echo "${{ env.VERSION }}" | sed 's/\.img\.xz$//')
         echo "VERSION=${VERSION}" >> $GITHUB_ENV
-        cd /opt/update
+        ls -a
+        cd update
+        ls -a
 
 
     - name: Pack image for Pi-bullseye

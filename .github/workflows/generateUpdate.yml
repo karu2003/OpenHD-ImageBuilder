@@ -73,5 +73,5 @@ jobs:
       with:
         name: ${{ env.VERSION}}-update-to${{ env.NEWVERSION }}
         path: |
-          *.deb
+          update/*.deb
           if-no-files-found: error

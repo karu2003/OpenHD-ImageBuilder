@@ -2,7 +2,7 @@ name: Image build on event
 
 on:
   push:
-    branches: [ "2.5-evo","2.5-rapha" ]
+    branches: [ "2.5-evo","experiments" ]
   pull_request:
     branches: [ "2.5-evo" ]
 
@@ -15,7 +15,7 @@ jobs:
       fail-fast: false # Don't fail all if any of the jobs is failing
       matrix:
         TESTING: [release]
-        TARGET: [pi-bullseye, x86-lunar, rock5b, rock5a] # <-- Add targets here!
+        TARGET: [pi-bullseye, x86-lunar, rock5b, rock5a, radxa-cm3] # <-- Add targets here!
 
 
     steps:

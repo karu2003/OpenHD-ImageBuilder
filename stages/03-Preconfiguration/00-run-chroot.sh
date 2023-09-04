@@ -40,6 +40,22 @@ if [[ "${OS}" == "radxa-ubuntu-rock5b" ]]; then
     depmod -a
 fi
 
+if [[ "${OS}" == "radxa-debian-rock-cm3" ]]; then
+    touch /etc/systemd/system/usb.service
+    SERVICE_CONTENT="[Unit]
+Description=Enable USB
+
+[Service]
+ExecStart=/bin/sh -c \"echo host > /sys/devices/platform/fe8a0000.usb2-phy/otg_mode\"
+
+[Install]
+WantedBy=multi-user.target"
+
+# Create the systemd service unit file
+echo "$SERVICE_CONTENT" > /etc/systemd/system/usb.service
+systemctl enable usb
+fi
+
 if [[ "${OS}" == "radxa-ubuntu-rock5a" ]]; then
     tree /boot
     sed -i 's/\(overlays=\)/\1rock-5a-radxa-camera-4k/' /boot/firmware/ubuntuEnv.txt

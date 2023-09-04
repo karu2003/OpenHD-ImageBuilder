@@ -22,7 +22,7 @@ function install_radxa-ubuntu_packages {
 function install_radxa-debian_packages {
     PLATFORM_PACKAGES_HOLD="8852be-dkms linux-image-5.10.110-6-rockchip linux-image-5.10.110-11-rockchip linux-image-rock-5a"
     PLATFORM_PACKAGES_REMOVE="dkms xorg sddm plymouth plasma-desktop kde*"
-    PLATFORM_PACKAGES="rockchip-iq-openhd linux-image-5.10.110-99-rockchip-ga98fc3587 linux-image-5.10.110-99-rockchip-ga98fc3587 rsync qopenhd procps mpp mpv camera-engine-rkaiq"
+    PLATFORM_PACKAGES="rockchip-iq-openhd linux-image-5.10.110-99-rockchip-ga98fc3587 linux-image-5.10.110-99-rockchip-ga98fc3587 qopenhd procps mpp camera-engine-rkaiq"
 }
 function install_radxa-cm3-debian_packages {
     PLATFORM_PACKAGES_HOLD="8852be-dkms linux-image-5.10.110-6-rockchip linux-image-5.10.110-11-rockchip linux-image-rock-5a linux-headers-5.10.160-13-rk356x linux-headers-5.10.160-12-rk356x linux-image-5.10.160-13-rk356x linux-image-5.10.160-12-rk356x"
@@ -86,6 +86,9 @@ if [[ "${OS}" == "ubuntu-x86" ]] ; then
          exit 1
      fi
  done
+ #Cleapup
+  apt autoremove -y
+
 
  # Hold platform-specific packages
  echo "Holding back platform-specific packages..."

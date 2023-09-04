@@ -21,7 +21,7 @@ function install_radxa-ubuntu_packages {
 }
 function install_radxa-debian_packages {
     PLATFORM_PACKAGES_HOLD="8852be-dkms linux-image-5.10.110-6-rockchip linux-image-5.10.110-11-rockchip linux-image-rock-5a"
-    PLATFORM_PACKAGES_REMOVE="dkms sddm plymouth plasma-desktop kde*"
+    PLATFORM_PACKAGES_REMOVE="dkms xorg sddm plymouth plasma-desktop kde*"
     PLATFORM_PACKAGES="rockchip-iq-openhd linux-image-5.10.110-99-rockchip-ga98fc3587 linux-image-5.10.110-99-rockchip-ga98fc3587 rsync qopenhd procps mpp mpv camera-engine-rkaiq"
 }
 function install_radxa-cm3-debian_packages {

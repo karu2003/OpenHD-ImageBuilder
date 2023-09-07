@@ -26,7 +26,7 @@ if [[ "${OS}" == "radxa-debian-rock5a" ]] || [[ "${OS}" == "radxa-debian-rock5b"
     rm -Rf /boot/openhd
     ln -s /config/openhd /boot/openhd
     #copy overlays from linux kernel into the correct folder
-    package_name=$(dpkg -l | awk '/^ii/ && $2 ~ /^linux-image-5\.10\.110-199-rockchip-/{print $2}')
+    package_name=$(dpkg -l | awk '/^ii/ && $2 ~ /^linux-image-5\.10\.160-199-rockchip-/{print $2}')
     version=$(echo "$package_name" | cut -d '-' -f 4-)
     source_dirA="/usr/lib/$package_name/rockchip/overlay/rock-5a-*"
     source_dirB="/usr/lib/$package_name/rockchip/overlay/rock-5b-*"

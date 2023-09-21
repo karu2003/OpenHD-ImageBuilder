@@ -21,8 +21,8 @@ function install_radxa-ubuntu_packages {
 }
 function install_radxa-debian_packages {
     PLATFORM_PACKAGES_HOLD="8852be-dkms linux-image-5.10.110-6-rockchip linux-image-5.10.110-11-rockchip linux-image-rock-5a"
-    PLATFORM_PACKAGES_REMOVE="dkms xorg sddm plymouth plasma-desktop kde*"
-    PLATFORM_PACKAGES="rockchip-iq-openhd linux-image-5.10.160-1-rk356x=5.10.160-1-c93b0c18e linux-libc-dev qopenhd procps camera-engine-rkaiq"
+    #Do not remove the GUI (for Arducam) PLATFORM_PACKAGES_REMOVE="dkms xorg sddm plymouth plasma-desktop kde*"
+    PLATFORM_PACKAGES="rockchip-iq-openhd librga2=2.2.0-1 linux-image-5.10.160-16-rk356x linux-headers-5.10.160-16-rk356x linux-libc-dev-5.10.160-16-rk356x qopenhd procps camera-engine-rkaiq"
 }
 # Ubuntu-x86-specific code
 function install_ubuntu_x86_packages {

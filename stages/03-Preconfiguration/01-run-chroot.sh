@@ -48,3 +48,6 @@ sudo systemctl enable ssh
 #Debug message
 echo "The image now is this big"
 df -h
+
+#Do not enable OpenHD (for Arducam)
+apt remove -y openhd qopenhd
